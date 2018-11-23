@@ -1,5 +1,7 @@
 import React from 'react'
 import {Component} from 'react'
+import RegisterForm from '../components/RegisterForm'
+import LoginForm from '../components/LoginForm'
 
 import {
 	BrowserRouter,
@@ -19,27 +21,27 @@ class MainLayout extends Component {
 
 	// setState asynchronous
 
-	// This doesn't depend on the previous state
-	setCounter = (counter) => {
-		this.setState({ counter: this.state.counter + 1 });
-	}
-
-	// This does depend on the previous state
-	setEmail = (email) => {
-		this.setState((prevState, currProps) => {
-			const newCredentials = {
-				...prevState.credentials,
-				email
-			};
-
-			const newState = {
-				...prevState,
-				credentials: newCredentials
-			};
-
-			return newState;
-		}
-	},
+	// // This doesn't depend on the previous state
+	// setCounter = (counter) => {
+	// 	this.setState({ counter: this.state.counter + 1 });
+	// }
+	//
+	// // This does depend on the previous state
+	// setEmail = (email) => {
+	// 	this.setState((prevState, currProps) => {
+	// 		const newCredentials = {
+	// 			...prevState.credentials,
+	// 			email
+	// 		};
+	//
+	// 		const newState = {
+	// 			...prevState,
+	// 			credentials: newCredentials
+	// 		};
+	//
+	// 		return newState;
+	// 	}
+	// }
 
 	render() {
 		const registerFormHandlers = {
@@ -63,4 +65,6 @@ class MainLayout extends Component {
 	}
 }
 
-/register/login
+//register/login
+
+export default MainLayout;

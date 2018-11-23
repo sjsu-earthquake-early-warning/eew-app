@@ -1,6 +1,6 @@
 import React from 'react';
 
-const RegisterForm = (props) => {
+const LoginForm = (props) => {
 	const { email, password } = props.credentials;
 	const { setEmail } = props.handlers;
 
@@ -17,4 +17,4 @@ const RegisterForm = (props) => {
 	)
 };
 
-export default RegisterForm;
+export default LoginForm;
