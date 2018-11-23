@@ -2,7 +2,7 @@ import React from 'react'
 import {Component} from 'react'
 
 import {
-	BrowserRouter
+	BrowserRouter,
 	Switch,
 	Route,
 	Redirect
@@ -16,14 +16,14 @@ class MainLayout extends Component {
 			password: ''
 		}
 	};
-	
+
 	// setState asynchronous
-	
+
 	// This doesn't depend on the previous state
-	setCounter => (counter) => {
+	setCounter = (counter) => {
 		this.setState({ counter: this.state.counter + 1 });
 	}
-	
+
 	// This does depend on the previous state
 	setEmail = (email) => {
 		this.setState((prevState, currProps) => {
@@ -31,21 +31,21 @@ class MainLayout extends Component {
 				...prevState.credentials,
 				email
 			};
-			
+
 			const newState = {
 				...prevState,
 				credentials: newCredentials
 			};
-			
+
 			return newState;
 		}
-	}
-	
+	},
+
 	render() {
 		const registerFormHandlers = {
 			setEmail: this.setEmail
 		};
-		
+
 		return (
 		  <BrowserRouter>
 		    <Switch>
@@ -61,6 +61,6 @@ class MainLayout extends Component {
 		  </BrowserRouter>
 		);
 	}
-}	
+}
 
 /register/login
