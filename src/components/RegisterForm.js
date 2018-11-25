@@ -7,14 +7,22 @@ const RegisterForm = (props) => {
 	return (
 	  <div>
 	    <p>{email}</p>
-		<p>{password}</p>
-		<input
-		  type="text"
-		  value={email}
-		  onChange={e => setEmail(e.target.email)}
-		/>
+			<p>{password}</p>
+			<input
+				type="text"
+				value={email}
+				onChange={e => setEmail(e.target.email)}
+			/>
 	  </div>
 	)
+};
+
+RegisterForm.defaultProps = {
+	handlers: {
+		setEmail: () => {},
+	},
+	email: '',
+	password: '',
 };
 
 export default RegisterForm;
