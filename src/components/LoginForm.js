@@ -7,14 +7,22 @@ const LoginForm = (props) => {
 	return (
 	  <div>
 	    <p>{email}</p>
-		<p>{password}</p>
-		<input
-		  type="text"
-		  value={email}
-		  onChange={e => setEmail(e.target.email)}
-		/>
-	  </div>
+			<p>{password}</p>
+			<input
+				type="text"
+				value={email}
+				onChange={e => setEmail(e.target.email)}
+			/>
+		</div>
 	)
+};
+
+LoginForm.defaultProps = {
+	handlers: {
+		setEmail: () => {},
+	},
+	email: '',
+	password: '',
 };
 
 export default LoginForm;

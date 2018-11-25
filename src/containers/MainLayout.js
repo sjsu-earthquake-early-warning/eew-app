@@ -43,6 +43,8 @@ class MainLayout extends Component {
 	// 	}
 	// }
 
+	setEmail() {}
+
 	render() {
 		const registerFormHandlers = {
 			setEmail: this.setEmail
@@ -51,15 +53,15 @@ class MainLayout extends Component {
 		return (
 		  <BrowserRouter>
 		    <Switch>
-			  <Route>
-			    to={"/register"}
-				render={() => <RegisterForm handlers={registerFormHandlers} credentials={this.state.credentials} />}
-			  </Route>
-			  <Route>
-			    to={"/login"}
-				component={LoginForm}
-			  </Route>
-			</Switch>
+					<Route
+						to={"/register"}
+						render={() => <RegisterForm handlers={registerFormHandlers} credentials={this.state.credentials} />}>
+					</Route>
+					<Route
+						to={"/login"}
+						component={LoginForm}>
+					</Route>
+				</Switch>
 		  </BrowserRouter>
 		);
 	}
