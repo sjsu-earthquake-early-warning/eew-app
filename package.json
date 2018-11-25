@@ -53,10 +53,21 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "lint-fix": "npm run lint -- --fix",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint",
+      "git add"
+    ]
   },
   "eslintConfig": {
-    "extends": ["bliss", "react-app"],
+    "extends": [
+      "bliss",
+      "react-app"
+    ],
     "rules": {
       "class-methods-use-this": "off"
     }
@@ -113,6 +124,8 @@
     "babel-loader": "^8.0.4",
     "eslint": "^5.6.0",
     "eslint-config-bliss": "^3.1.1",
-    "eslint-loader": "^2.1.1"
+    "eslint-loader": "^2.1.1",
+    "husky": "^1.2.0",
+    "lint-staged": "^8.1.0"
   }
 }

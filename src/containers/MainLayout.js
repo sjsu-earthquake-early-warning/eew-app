@@ -12,12 +12,10 @@ class MainLayout extends Component {
     }
   };
 
-  // setState asynchronous
-
   // // This doesn't depend on the previous state
-  // setCounter = (counter) => {
-  // 	this.setState({ counter: this.state.counter + 1 });
-  // }
+  setCounter = counter => {
+    this.setState({ counter: this.state.counter + 1 });
+  };
   //
   // // This does depend on the previous state
   // setEmail = (email) => {
