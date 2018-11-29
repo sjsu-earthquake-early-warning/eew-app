@@ -1,3 +1,10 @@
+Git workflow:
+1) When developing, create feature branches off of devmaster
+2) When features are working, merge your feature branch onto devmaster
+3) Merge devmaster onto master only at the end of each sprint
+
+--------------------------------------------------------------------------------------------------------
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
